@@ -17,7 +17,8 @@ defmodule LinkedSearchesWeb.Router do
   scope "/", LinkedSearchesWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", ThermostatLive
+    get "/home", PageController, :home
   end
 
   # Other scopes may use custom stacks.
